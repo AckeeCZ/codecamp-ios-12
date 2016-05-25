@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 
 //        uncomment to switch to MVVM demo
-        window?.rootViewController = ProfileViewController(viewModel: ProfileViewModel(user: User(firstName: "Al", lastName: "Gore", photoUrl: "https://lh3.googleusercontent.com/-L1jq5iRO8F0/AAAAAAAAAAI/AAAAAAAAADg/_jNY1FCEXSM/s0-c-k-no-ns/photo.jpg")))
+//        window?.rootViewController = ProfileViewController(viewModel: ProfileViewModel(user: User(firstName: "Al", lastName: "Gore", photoUrl: "https://lh3.googleusercontent.com/-L1jq5iRO8F0/AAAAAAAAAAI/AAAAAAAAADg/_jNY1FCEXSM/s0-c-k-no-ns/photo.jpg")))
 
         return true
     }
