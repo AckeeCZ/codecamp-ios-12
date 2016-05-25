@@ -16,7 +16,7 @@
 		790A4D481C3C6718008FE199 /* FRPDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790A4D471C3C6718008FE199 /* FRPDemoAppTests.swift */; };
 		790A4D531C3C6718008FE199 /* FRPDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790A4D521C3C6718008FE199 /* FRPDemoAppUITests.swift */; };
 		790A4D711C3C6D07008FE199 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790A4D701C3C6D07008FE199 /* UIKitExtensions.swift */; };
-		79DF9E191C3C906700B09E50 /* MVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DF9E181C3C906700B09E50 /* MVVM.swift */; };
+		7969F60E1C41B31200E001CC /* MVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7969F60D1C41B31200E001CC /* MVVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		790A4D521C3C6718008FE199 /* FRPDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRPDemoAppUITests.swift; sourceTree = "<group>"; };
 		790A4D541C3C6718008FE199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		790A4D701C3C6D07008FE199 /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
-		79DF9E181C3C906700B09E50 /* MVVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVM.swift; sourceTree = "<group>"; };
+		7969F60D1C41B31200E001CC /* MVVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVM.swift; sourceTree = "<group>"; };
 		B51E3B6611E29CCA24131576 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C9F662E37A0969D85B9FCA1B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,7 +115,7 @@
 				790A4D391C3C6718008FE199 /* Assets.xcassets */,
 				790A4D3B1C3C6718008FE199 /* LaunchScreen.storyboard */,
 				790A4D3E1C3C6718008FE199 /* Info.plist */,
-				79DF9E181C3C906700B09E50 /* MVVM.swift */,
+				7969F60D1C41B31200E001CC /* MVVM.swift */,
 			);
 			path = FRPDemoApp;
 			sourceTree = "<group>";
@@ -340,7 +340,7 @@
 				790A4D351C3C6718008FE199 /* ViewController.swift in Sources */,
 				790A4D331C3C6718008FE199 /* AppDelegate.swift in Sources */,
 				790A4D711C3C6D07008FE199 /* UIKitExtensions.swift in Sources */,
-				79DF9E191C3C906700B09E50 /* MVVM.swift in Sources */,
+				7969F60E1C41B31200E001CC /* MVVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
