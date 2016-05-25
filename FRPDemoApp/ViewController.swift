@@ -23,21 +23,21 @@ class FRPDemoViewController: UIViewController {
 //        let strings = SignalProducer<String, NoError>(values: ["m", "Dev", "Talk"])
         let strings = textField.rac_text.producer
 
-        label.rac_text <~ strings
-            .filter { $0.characters.count > 1 }
-            .map { $0.uppercaseString }
+//        label.rac_text <~ strings
+//            .filter { $0.characters.count > 1 }
+//            .map { $0.uppercaseString }
 
 //        label.rac_text <~ strings
-//            .reduce("", +)
+//            .reduce(
 
 //        label.rac_text <~ strings
 //            .scan("", +)
 
-//        label.rac_text <~ strings
-//            .flatMap(.Latest) {
-//                search($0)
-//            }
-//            .observeOn(UIScheduler())
+        label.rac_text <~ strings
+            .flatMap(.Latest) {
+                search($0)
+        }
+            .observeOn(UIScheduler())
 
 //        label.rac_text <~ strings
 //            .flatMap(.Latest) {
@@ -94,28 +94,10 @@ class FRPDemoViewController: UIViewController {
 
 private let searchQueue = NSOperationQueue()
 
-//func search(query: String) -> SignalProducer<String, NoError> {
-//    return SignalProducer { sink, disposable in
-//        let op = NSBlockOperation {
-//            sleep(2)
-//            sink.sendNext(query.uppercaseString)
-//            sink.sendCompleted()
-//        }
-//
-//        disposable.addDisposable { op.cancel() }
-//
-//        searchQueue.addOperation(op)
-//    }
-//}
-
-func search(query: String) -> SignalProducer<String, SearchError> {
+func search(query: String) -> SignalProducer<String, NoError> {
     return SignalProducer { sink, disposable in
-
-        guard !query.isEmpty else { sink.sendFailed(.QueryEmpty); return }
-
         let op = NSBlockOperation {
             sleep(2)
-            guard random() % 2 != 0 else { sink.sendFailed(.Other(underlyingError: connectionError)); return }
             sink.sendNext(query.uppercaseString)
             sink.sendCompleted()
         }
@@ -125,6 +107,24 @@ func search(query: String) -> SignalProducer<String, SearchError> {
         searchQueue.addOperation(op)
     }
 }
+
+//    func search(query: String) -> SignalProducer<String, SearchError> {
+//        return SignalProducer { sink, disposable in
+//
+//            guard !query.isEmpty else { sink.sendFailed(.QueryEmpty); return }
+//
+//            let op = NSBlockOperation {
+//                sleep(2)
+//                guard random() % 2 != 0 else { sink.sendFailed(.Other(underlyingError: connectionError)); return }
+//                sink.sendNext(query.uppercaseString)
+//                sink.sendCompleted()
+//            }
+//
+//            disposable.addDisposable { op.cancel() }
+//
+//            searchQueue.addOperation(op)
+//        }
+//    }
 
 var connectionError: NSError {
     return NSError(domain: "nejde net", code: 0, userInfo: nil)
