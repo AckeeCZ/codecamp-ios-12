@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		6D4642301E088A350040FAC5 /* ReactivePlaygroundFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D46422E1E088A350040FAC5 /* ReactivePlaygroundFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		765AF0318E6BFD486A2D48DA /* Pods_ReactivePlaygroundFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3CB1474E8CE123B916830B /* Pods_ReactivePlaygroundFramework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B2A86C71438EF44FACDBB30 /* Pods-ReactivePlaygroundFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactivePlaygroundFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactivePlaygroundFramework/Pods-ReactivePlaygroundFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		6D46422B1E088A350040FAC5 /* ReactivePlaygroundFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactivePlaygroundFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D46422E1E088A350040FAC5 /* ReactivePlaygroundFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactivePlaygroundFramework.h; sourceTree = "<group>"; };
 		6D46422F1E088A350040FAC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DC3D0551E088CC6006F4457 /* ReactivePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ReactivePlayground.playground; sourceTree = "<group>"; };
+		7F53768882E461C09B189A6F /* Pods-ReactivePlaygroundFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactivePlaygroundFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactivePlaygroundFramework/Pods-ReactivePlaygroundFramework.release.xcconfig"; sourceTree = "<group>"; };
+		8D3CB1474E8CE123B916830B /* Pods_ReactivePlaygroundFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactivePlaygroundFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +26,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				765AF0318E6BFD486A2D48DA /* Pods_ReactivePlaygroundFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F779674BF1103DF2F23EF6B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B2A86C71438EF44FACDBB30 /* Pods-ReactivePlaygroundFramework.debug.xcconfig */,
+				7F53768882E461C09B189A6F /* Pods-ReactivePlaygroundFramework.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5F8B07F5283D457C5EE712E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D3CB1474E8CE123B916830B /* Pods_ReactivePlaygroundFramework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6D4642211E088A350040FAC5 = {
 			isa = PBXGroup;
 			children = (
-				6D46422D1E088A350040FAC5 /* ReactivePlaygroundFramework */,
+				6DC3D0551E088CC6006F4457 /* ReactivePlayground.playground */,
+				5F8B07F5283D457C5EE712E6 /* Frameworks */,
+				3F779674BF1103DF2F23EF6B /* Pods */,
 				6D46422C1E088A350040FAC5 /* Products */,
+				6D46422D1E088A350040FAC5 /* ReactivePlaygroundFramework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,10 +96,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D4642331E088A350040FAC5 /* Build configuration list for PBXNativeTarget "ReactivePlaygroundFramework" */;
 			buildPhases = (
+				BA9B273A2FDDB10E6325D40C /* [CP] Check Pods Manifest.lock */,
 				6D4642261E088A350040FAC5 /* Sources */,
 				6D4642271E088A350040FAC5 /* Frameworks */,
 				6D4642281E088A350040FAC5 /* Headers */,
 				6D4642291E088A350040FAC5 /* Resources */,
+				2EE4F5A0594CF9E4F8AEA884 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,6 +154,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2EE4F5A0594CF9E4F8AEA884 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactivePlaygroundFramework/Pods-ReactivePlaygroundFramework-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA9B273A2FDDB10E6325D40C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6D4642261E088A350040FAC5 /* Sources */ = {
@@ -239,6 +300,7 @@
 		};
 		6D4642341E088A350040FAC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B2A86C71438EF44FACDBB30 /* Pods-ReactivePlaygroundFramework.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -258,6 +320,7 @@
 		};
 		6D4642351E088A350040FAC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F53768882E461C09B189A6F /* Pods-ReactivePlaygroundFramework.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -294,6 +357,7 @@
 				6D4642351E088A350040FAC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
